@@ -1261,3 +1261,94 @@ strong { font-weight: 700; }
   .ic-logo-marquee.is-animated .ic-logo-marquee__inner { animation: none; }
   .ic-slider__slide { transition: none; }
 }
+
+/* ---------- 4. Sectors card carousel (Home) ----------
+   Structure based on "Sectors we support" (totalclean.co.uk): centred title,
+   4 cards per view, square arrows on the sides, one dot per page. Cards keep the .ic-card style. */
+.ic-card-carousel {
+  position: relative;
+  margin-top: 8px;
+}
+.ic-card-carousel__viewport {
+  overflow-x: auto;
+  padding: 10px 0 28px;                    /* room for the card hover lift + shadow */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.ic-card-carousel__viewport::-webkit-scrollbar { display: none; }
+.ic-card-carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3 * 30px) / 4);   /* 4 cards per view */
+  gap: 30px;
+}
+.ic-card-carousel__track li { scroll-snap-align: start; }
+
+.ic-card-carousel__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+.ic-card-carousel__dots { display: flex; gap: 10px; }
+.ic-card-carousel__dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 1.5px solid var(--ic-primary);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.ic-card-carousel__dot[aria-current="true"] { background: var(--ic-primary); }
+
+/* desktop: arrows sit outside the cards, vertically centred on them */
+.ic-card-carousel__arrow {
+  position: absolute;
+  top: calc(10px + 233px / 2);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 2px solid var(--ic-primary);
+  border-radius: 8px;
+  background: var(--ic-white);
+  color: var(--ic-primary);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+.ic-card-carousel__arrow--prev { left: -66px; }
+.ic-card-carousel__arrow--next { right: -66px; }
+.ic-card-carousel__arrow:hover:not(:disabled) { background: var(--ic-primary); color: var(--ic-white); }
+.ic-card-carousel__arrow:disabled { opacity: 0.3; cursor: default; }
+.ic-card-carousel__arrow svg {
+  width: 22px; height: 22px;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* tablet: 3 per view, arrows move into the row with the dots */
+@media (max-width: 1024px) {
+  .ic-card-carousel__track { grid-auto-columns: calc((100% - 2 * 24px) / 3); gap: 24px; }
+  .ic-card-carousel__arrow { position: static; transform: none; }
+}
+
+/* mobile: 1 card + a peek of the next one */
+@media (max-width: 767px) {
+  .ic-card-carousel__track { grid-auto-columns: 80%; gap: 16px; }
+  .ic-card-carousel__arrow { width: 36px; height: 36px; }
+  .ic-card-carousel__arrow svg { width: 18px; height: 18px; }
+  .ic-card-carousel__nav { gap: 12px; }
+  .ic-card-carousel__dots { gap: 8px; }
+  .ic-card-carousel__dot { width: 9px; height: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ic-card-carousel__viewport { scroll-behavior: auto; }
+}

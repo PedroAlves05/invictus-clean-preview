@@ -123,13 +123,14 @@
   });
 
   /* ---------- Photo carousel (About) ----------
-     Fade between slides, autoplay every 4.5s, pauses on hover/focus,
+     Fade between slides, autoplay every 4.5s (always running: it does not
+     pause on hover; clicking an arrow/dot just restarts the 4.5s count),
      arrows, dots and swipe on touch screens. */
   document.querySelectorAll('[data-slider]').forEach(function (s) {
     var slides = Array.prototype.slice.call(s.querySelectorAll('.ic-slider__slide'));
     var dotsWrap = s.querySelector('[data-slider-dots]');
     if (slides.length < 2) return;
-    var current = 0, timer = null, paused = false;
+    var current = 0, timer = null;
 
     var dots = slides.map(function (_, k) {
       var b = document.createElement('button');
@@ -151,7 +152,7 @@
     }
     function restart() {
       clearInterval(timer);
-      if (!reduceMotion && !paused) timer = setInterval(function () { go(current + 1); }, 4500);
+      timer = setInterval(function () { go(current + 1); }, 4500);
     }
 
     var prev = s.querySelector('[data-slider-prev]');
@@ -159,10 +160,6 @@
     if (prev) prev.addEventListener('click', function () { go(current - 1); restart(); });
     if (next) next.addEventListener('click', function () { go(current + 1); restart(); });
 
-    s.addEventListener('mouseenter', function () { paused = true; clearInterval(timer); });
-    s.addEventListener('mouseleave', function () { paused = false; restart(); });
-    s.addEventListener('focusin', function () { paused = true; clearInterval(timer); });
-    s.addEventListener('focusout', function () { paused = false; restart(); });
 
     var startX = null;
     s.addEventListener('pointerdown', function (e) { startX = e.clientX; });
@@ -175,5 +172,72 @@
 
     go(0);
     restart();
+  });
+
+  /* ---------- Sectors card carousel (Home) ----------
+     Native horizontal scroll with snap (so touch swipe works for free);
+     arrows and dots move one "page" (= the cards that fit on screen) at a time. */
+  document.querySelectorAll('[data-card-carousel]').forEach(function (c) {
+    var vp = c.querySelector('[data-cc-viewport]');
+    var items = vp ? Array.prototype.slice.call(vp.querySelectorAll('li')) : [];
+    var prev = c.querySelector('[data-cc-prev]');
+    var next = c.querySelector('[data-cc-next]');
+    var dotsWrap = c.querySelector('[data-cc-dots]');
+    if (!items.length) return;
+    var dots = [];
+
+    function gap() { return parseFloat(getComputedStyle(items[0].parentElement).columnGap) || 0; }
+    function step() { return items[0].getBoundingClientRect().width + gap(); }
+    // N cards fit when N*card + (N-1)*gap <= width, i.e. N <= (width + gap) / (card + gap)
+    function perView() { return Math.max(1, Math.floor((vp.clientWidth + gap() + 1) / step())); }
+    function pageCount() { return Math.max(1, Math.ceil(items.length / perView())); }
+    function maxScroll() { return vp.scrollWidth - vp.clientWidth; }
+    function currentPage() {
+      if (vp.scrollLeft >= maxScroll() - 2) return pageCount() - 1;
+      return Math.round(vp.scrollLeft / (perView() * step()));
+    }
+    function goPage(n) {
+      n = Math.max(0, Math.min(pageCount() - 1, n));
+      vp.scrollTo({ left: Math.min(n * perView() * step(), maxScroll()) });
+    }
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = '';
+      dots = [];
+      for (var k = 0; k < pageCount(); k++) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'ic-card-carousel__dot';
+        b.setAttribute('aria-label', 'Go to page ' + (k + 1));
+        b.addEventListener('click', goPage.bind(null, k));
+        dotsWrap.appendChild(b);
+        dots.push(b);
+      }
+    }
+    function update() {
+      var p = currentPage();
+      dots.forEach(function (d, k) { d.setAttribute('aria-current', k === p ? 'true' : 'false'); });
+      if (prev) prev.disabled = vp.scrollLeft <= 2;
+      if (next) next.disabled = vp.scrollLeft >= maxScroll() - 2;
+    }
+
+    if (prev) prev.addEventListener('click', function () { goPage(currentPage() - 1); });
+    if (next) next.addEventListener('click', function () { goPage(currentPage() + 1); });
+
+    var ticking = false;
+    vp.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { update(); ticking = false; });
+    });
+
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { buildDots(); update(); }, 150);
+    });
+
+    buildDots();
+    update();
   });
 })();

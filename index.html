@@ -217,65 +217,81 @@
 
   <!-- =========================================================
        3. SECTORS + SERVICES  → Elementor: Heading + Container grid (3 cols) of Image Box
+       v2: "Our Sectors" is now a carousel (4 cards per view, arrows on the sides, dots below)
+           → Elementor: Loop Carousel / Image Carousel — see GUIA-ELEMENTOR.md. "Our Services" stays a grid.
        ========================================================= -->
   <section class="ic-section ic-cards-section" id="sectors">
     <div class="ic-container">
       <h2 class="ic-h2 ic-center">Our Sectors</h2>
 
-      <ul class="ic-card-grid">
-        <li><a class="ic-card" href="banking-and-finance.html">
-          <img src="images/home-sector-01-banking-finance.webp" alt="Illustration of a cleaner pushing a bin in front of a bank building" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Banking and Finance</span>
-        </a></li>
-        <li><a class="ic-card" href="car-dealership-showroom.html">
-          <img src="images/home-sector-02-car-dealership.webp" alt="Illustration of a car showroom with a cleaner outside" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Car dealership &amp; Showroom</span>
-        </a></li>
-        <li><a class="ic-card" href="business-office.html">
-          <img src="images/home-sector-03-business-office.webp" alt="Illustration of a cleaner washing an office building" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Business Office</span>
-        </a></li>
-        <li><a class="ic-card" href="hospitality-accommodation.html">
-          <img src="images/home-sector-04-hospitality.webp" alt="Illustration of cleaners working on a hotel facade" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Hospitality &amp; Accommodation</span>
-        </a></li>
-        <li><a class="ic-card" href="professional-practice.html">
-          <img src="images/home-sector-05-professional-practice.webp" alt="Illustration of two cleaners organising an office room" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Professional Practice</span>
-        </a></li>
-        <li><a class="ic-card" href="healthcare-medical-centre.html">
-          <img src="images/home-sector-06-healthcare.webp" alt="Illustration of a cleaner mopping outside a hospital" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Healthcare &amp; Medical Centre</span>
-        </a></li>
-        <li><a class="ic-card" href="property-management.html">
-          <img src="images/home-sector-07-property-management.webp" alt="Illustration of two cleaners working in a property" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Property Management</span>
-        </a></li>
-        <li><a class="ic-card" href="public-sector.html">
-          <img src="images/home-sector-08-public-sector.webp" alt="Illustration of a cleaner in front of a public building" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Public Sector</span>
-        </a></li>
-        <li><a class="ic-card" href="retail-gym-and-leisure.html">
-          <img src="images/home-sector-09-retail-gym-leisure.webp" alt="Illustration of a cleaner wiping gym equipment" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Retail, Gym and Leisure</span>
-        </a></li>
-        <li><a class="ic-card" href="school-education.html">
-          <img src="images/home-sector-10-school-education.webp" alt="Illustration of two cleaners in a classroom" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">School &amp; Education</span>
-        </a></li>
-        <li><a class="ic-card" href="tv-radio-film-studio.html">
-          <img src="images/home-sector-11-tv-radio-film.webp" alt="Illustration of a cleaner next to a film clapperboard" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">TV, Radio &amp; Film Studio</span>
-        </a></li>
-        <li><a class="ic-card" href="church-community-centre.html">
-          <img src="images/home-sector-12-church-community.webp" alt="Illustration of two cleaners at a church" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Church &amp; Community Centre</span>
-        </a></li>
-        <li class="ic-card-grid__center"><a class="ic-card" href="residential-homes.html">
-          <img src="images/home-sector-13-residential-homes.webp" alt="Illustration of two cleaners cleaning a sofa at home" width="600" height="600" loading="lazy">
-          <span class="ic-card__label">Residential Homes</span>
-        </a></li>
-      </ul>
+      <div class="ic-card-carousel" data-card-carousel aria-roledescription="carousel" aria-label="Our sectors">
+        <div class="ic-card-carousel__viewport" data-cc-viewport>
+          <ul class="ic-card-carousel__track">
+            <li><a class="ic-card" href="banking-and-finance.html">
+              <img src="images/home-sector-01-banking-finance.webp" alt="Illustration of a cleaner pushing a bin in front of a bank building" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Banking and Finance</span>
+            </a></li>
+            <li><a class="ic-card" href="car-dealership-showroom.html">
+              <img src="images/home-sector-02-car-dealership.webp" alt="Illustration of a car showroom with a cleaner outside" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Car dealership &amp; Showroom</span>
+            </a></li>
+            <li><a class="ic-card" href="business-office.html">
+              <img src="images/home-sector-03-business-office.webp" alt="Illustration of a cleaner washing an office building" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Business Office</span>
+            </a></li>
+            <li><a class="ic-card" href="hospitality-accommodation.html">
+              <img src="images/home-sector-04-hospitality.webp" alt="Illustration of cleaners working on a hotel facade" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Hospitality &amp; Accommodation</span>
+            </a></li>
+            <li><a class="ic-card" href="professional-practice.html">
+              <img src="images/home-sector-05-professional-practice.webp" alt="Illustration of two cleaners organising an office room" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Professional Practice</span>
+            </a></li>
+            <li><a class="ic-card" href="healthcare-medical-centre.html">
+              <img src="images/home-sector-06-healthcare.webp" alt="Illustration of a cleaner mopping outside a hospital" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Healthcare &amp; Medical Centre</span>
+            </a></li>
+            <li><a class="ic-card" href="property-management.html">
+              <img src="images/home-sector-07-property-management.webp" alt="Illustration of two cleaners working in a property" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Property Management</span>
+            </a></li>
+            <li><a class="ic-card" href="public-sector.html">
+              <img src="images/home-sector-08-public-sector.webp" alt="Illustration of a cleaner in front of a public building" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Public Sector</span>
+            </a></li>
+            <li><a class="ic-card" href="retail-gym-and-leisure.html">
+              <img src="images/home-sector-09-retail-gym-leisure.webp" alt="Illustration of a cleaner wiping gym equipment" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Retail, Gym and Leisure</span>
+            </a></li>
+            <li><a class="ic-card" href="school-education.html">
+              <img src="images/home-sector-10-school-education.webp" alt="Illustration of two cleaners in a classroom" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">School &amp; Education</span>
+            </a></li>
+            <li><a class="ic-card" href="tv-radio-film-studio.html">
+              <img src="images/home-sector-11-tv-radio-film.webp" alt="Illustration of a cleaner next to a film clapperboard" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">TV, Radio &amp; Film Studio</span>
+            </a></li>
+            <li><a class="ic-card" href="church-community-centre.html">
+              <img src="images/home-sector-12-church-community.webp" alt="Illustration of two cleaners at a church" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Church &amp; Community Centre</span>
+            </a></li>
+            <li><a class="ic-card" href="residential-homes.html">
+              <img src="images/home-sector-13-residential-homes.webp" alt="Illustration of two cleaners cleaning a sofa at home" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Residential Homes</span>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="ic-card-carousel__nav">
+          <button class="ic-card-carousel__arrow ic-card-carousel__arrow--prev" type="button" data-cc-prev aria-label="Previous sectors">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          </button>
+          <div class="ic-card-carousel__dots" data-cc-dots></div>
+          <button class="ic-card-carousel__arrow ic-card-carousel__arrow--next" type="button" data-cc-next aria-label="Next sectors">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
 
       <h2 class="ic-h2 ic-center ic-services-title" id="services">Our Services</h2>
       <div class="ic-services-intro">

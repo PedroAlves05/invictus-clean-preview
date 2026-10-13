@@ -8,7 +8,7 @@ and each page was compared side by side with the live one (total height within 1
 
 ## What changed in v2
 
-Three animations. Everything else is identical to `Site-HTML/`. In the code, look for the `v2` comments in
+Animations and carousels (4 changes). Everything else is identical to `Site-HTML/`. In the code, look for the `v2` comments in
 `index.html`, `about.html`, the **"v2 — ANIMATIONS"** block at the end of `css/style.css` and at the end of `js/main.js`.
 
 ### 1. Home hero: typing headline
@@ -35,11 +35,23 @@ Three animations. Everything else is identical to `Site-HTML/`. In the code, loo
 
 ### 3. About: photo carousel instead of the single photo
 - 6 **real team photos** (from your own backup), fading every 4.5s, with arrows (on hover; always visible on mobile),
-  dots and swipe. Pauses on hover.
+  dots and swipe. **Always runs on its own**: it does not pause when the mouse is over it; clicking an arrow or dot just
+  restarts the 4.5s count.
 - Photos (already cropped to the same frame, in `images/`): `about-carousel-01-team` · `02-cleaner-smiling` · `03-victor-van` ·
   `04-handrail` · `05-office-vacuuming` · `06-reception`.
-- **Elementor:** **Image Carousel** widget → *Slides to show: 1* · *Effect: Fade* · *Autoplay speed:* 4500 · *Pause on hover: Yes* ·
+- **Elementor:** **Image Carousel** widget → *Slides to show: 1* · *Effect: Fade* · *Autoplay speed:* 4500 · *Pause on hover: **No*** · *Pause on interaction: No* ·
   *Navigation: Arrows and Dots* · *Image size:* full · *Image Stretch: Yes*.
+
+### 4. Home: "Our Sectors" as a carousel
+- Same cards as before (border, illustration, label), now in a carousel. Structure based on "Sectors we support"
+  (totalclean.co.uk): centred title (no line below it), **4 cards per view**, square arrow buttons **outside** the cards
+  (left/right) and **one dot per page** (4 pages for the 13 sectors). No autoplay. Arrows fade out at the start/end.
+- Tablet: 3 cards per view · Mobile: 1 card + a peek of the next one; on both the arrows sit next to the dots. Swipe works on touch.
+- "Our Services" (6 cards) stays as a grid.
+- **Elementor:** **Loop Carousel** (Pro; best option, the card is a Loop Item template = Image + label, link on the whole box)
+  or **Image Carousel** with captions → *Slides to show:* 4 (tablet 3, mobile 1) · *Slides to scroll:* 4 (tablet 3, mobile 1) ·
+  *Autoplay: No* · *Infinite loop: No* · *Navigation: Arrows and Dots* · *Space between:* 30px.
+  Arrows: 44×44px, border 2px Primary, radius 8px, white background, hover = Primary background + white icon.
 
 ---
 
