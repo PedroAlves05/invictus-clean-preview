@@ -148,6 +148,7 @@ Never set fixed pixel widths on columns.
 | Block | Class | Where | Notes |
 |---|---|---|---|
 | Section heading | `.ic-h2` + intro | Every section | H2 centered + optional intro (max 48rem, Body) · 48px to the content below |
+| Free quote band | `.ic-quote-cta` | Home (button → `#contact`), every sector and service page (button → `/contact`) | Photo background + dark overlay, H2, text, checklist, light button |
 | Dark panel | `.ic-panel` | About (vision, mission, values), sector feature boxes | Primary background, white text, centered, padding 24px, radius 8px, title Large |
 | Sector/service card | `.ic-card` | Our Sectors / Our Services carousels | Border 2px Primary, radius 8px, padding 16/16/24px, illustration max 200px square, label, small "Find Out More" button pushed to the bottom; whole card is the link |
 | Contact info | `.ic-contact__info` | Home, Contact | Intro · **Email** · **Phones** (Victor / Karla + availability) |
@@ -209,11 +210,17 @@ Never set fixed pixel widths on columns.
 ### 5.4 Sector template (`banking-and-finance.html`) — used by all 13 sectors
 - **Hero** — two halves, 48px gap: H1 + 2 justified paragraphs + "Get in Touch" (24px below) | illustration (max 440px, centered).
 - **Details** — H2 centered + 2 justified paragraphs (24px below the title) + **two halves** of dark panels (48px below), global gap.
+- **Other Sectors We Clean** — Tint band, H2 centered + the **same card carousel as the Home**, listing the other 12 sectors
+  (leave out the current page). Gives each page more content and internal links. *Loop Carousel* with a query/filter that
+  excludes the current page, or a manual *Image Carousel* per page.
+- **Free quote band** — the same block as the Home (save it as a template once and insert it); button → `/contact`.
 - Mobile: title → text → illustration (max 240px) → button centered → panels stacked.
 
 ### 5.5 Service template (`builders-cleaning.html`) — used by all 6 services
 - **Hero** — mirrored: illustration (max 440px) | H1 + paragraph + button, **right-aligned**.
 - **Details** — H2 centered + 3 justified paragraphs.
+- **Other Cleaning Services** — Tint band + card carousel with the other 5 services (same rules as the sector template).
+- **Free quote band** — same template as the Home; button → `/contact`.
 - Mobile: same order as the sector template.
 
 ### 5.6 Blog listing (`blog.html` → `/blog`) — *Theme Builder → Archive* / *Loop Grid*

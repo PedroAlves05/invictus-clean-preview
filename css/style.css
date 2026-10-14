@@ -1238,3 +1238,6 @@ figure { margin: 0; }
   .ic-faq-list__answer { animation: none; }
   .ic-card-carousel__viewport { scroll-behavior: auto; }
 }
+
+/* ---------- SECTOR + SERVICE · "Other sectors / services" carousel ---------- */
+.ic-related { background: var(--ic-tint); }

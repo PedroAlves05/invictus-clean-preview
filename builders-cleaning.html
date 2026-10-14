@@ -123,7 +123,7 @@
 </header>
 
 <!-- SERVICE PAGE TEMPLATE — the other 5 service pages follow this same layout
-     (illustration on the left, text right-aligned on the right, text block below). -->
+     (mirrored hero, details text, "Other services" carousel, free quote band). -->
 <main id="main">
 
   <!-- =========================================================
@@ -154,6 +154,80 @@
         <p>Due to the nature of builders’ work, it can often mean that there isn’t much time between their work being finished and you moving into the premises which is where a builder’s cleaning service comes in.</p>
         <p>Our experience ensure we arrive as soon as possible and work efficiently to do a full clean of your property in time for when you need it. We provide a dedicated builder's cleaning service to ensure you always get the best service possible so that the building looks and feels new when you arrive.</p>
         <p>Our deep cleaning service means we can provide a professional cleaning to all areas of the building to mitigate any risk, allowing us to keep your workers as safe as possible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. OTHER SERVICES (v2)  → Elementor: Heading + Loop Carousel (same card carousel as the Home)
+       Every service page lists the others (internal links). Remove the current page from the list.
+       ========================================================= -->
+  <section class="ic-section ic-related" aria-labelledby="ic-related-title">
+    <div class="ic-container">
+      <h2 class="ic-h2 ic-center" id="ic-related-title">Other Cleaning Services</h2>
+
+      <div class="ic-card-carousel" data-card-carousel aria-roledescription="carousel" aria-label="Other services">
+        <div class="ic-card-carousel__viewport" data-cc-viewport>
+          <ul class="ic-card-carousel__track">
+            <li><a class="ic-card" href="upholstery-and-carpet-cleaning.html">
+              <img src="images/home-service-02-upholstery-carpet.webp" alt="Illustration of two cleaners vacuuming an armchair and carpet" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Upholstery and Carpet Cleaning</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="deep-cleaning.html">
+              <img src="images/home-service-03-deep-cleaning.webp" alt="Illustration of two cleaners deep cleaning a sofa" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Deep Cleaning</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="exit-cleaning.html">
+              <img src="images/home-service-04-exit-cleaning.webp" alt="Illustration of two cleaners cleaning a kitchen" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Exit Cleaning</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="window-cleaning.html">
+              <img src="images/home-service-05-window-cleaning.webp" alt="Illustration of two cleaners washing a large window" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Window Cleaning</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="carpark-and-facade-cleaning.html">
+              <img src="images/home-service-06-carpark-facade.webp" alt="Illustration of workers cleaning a building facade and car park" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Carpark and Facade Cleaning</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="ic-card-carousel__nav">
+          <button class="ic-card-carousel__arrow ic-card-carousel__arrow--prev" type="button" data-cc-prev aria-label="Previous">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          </button>
+          <div class="ic-card-carousel__dots" data-cc-dots></div>
+          <button class="ic-card-carousel__arrow ic-card-carousel__arrow--next" type="button" data-cc-next aria-label="Next">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. FREE QUOTE BAND (v2)  → same block as the Home (save it as an Elementor template); button → /contact
+       ========================================================= -->
+  <section class="ic-quote-cta" aria-labelledby="ic-quote-title">
+    <div class="ic-container">
+      <div class="ic-quote-cta__content">
+        <h2 class="ic-h2" id="ic-quote-title">Get a Free, No-Obligation Cleaning Quote in Adelaide</h2>
+        <p>Tell us a bit about your space and we'll be in touch within hours — not days. No pushy sales calls. Just an honest conversation about what you need.</p>
+        <ul class="ic-quote-cta__checks">
+          <li>Free on-site assessment</li>
+          <li>Custom quote within 24 hours</li>
+          <li>No lock-in contracts</li>
+          <li>Seamless changeover if switching</li>
+          <li>Direct line to management</li>
+        </ul>
+        <a class="ic-btn ic-btn--light" href="contact.html">Request My Free Quote
+          <svg viewBox="0 0 8 14" aria-hidden="true"><path d="m1 1 6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>

@@ -123,7 +123,7 @@
 </header>
 
 <!-- SECTOR PAGE TEMPLATE — the other 12 sector pages follow this same layout
-     (text on the left, illustration on the right, 2 dark cards below). -->
+     (hero, details + 2 dark cards, "Other sectors" carousel, free quote band). -->
 <main id="main">
 
   <!-- =========================================================
@@ -167,6 +167,115 @@
       <div class="ic-panel ic-panel--feature">
         <h3 class="ic-panel__title">Additional Cleaning Services</h3>
         <p>Outside of our deep cleaning service, we provide a number of complementary services that will help to keep your business running smoothly and look its best at all times. These services include floor cleaning, window and facade cleaning, carpet and upholstery cleaning. Not only do these services help to improve the health of your employees, but they also serve to make your business look cleaner and more formal, raising the quality of your building.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. OTHER SECTORS (v2)  → Elementor: Heading + Loop Carousel (same card carousel as the Home)
+       Every sector page lists the others (internal links). Remove the current page from the list.
+       ========================================================= -->
+  <section class="ic-section ic-related" aria-labelledby="ic-related-title">
+    <div class="ic-container">
+      <h2 class="ic-h2 ic-center" id="ic-related-title">Other Sectors We Clean</h2>
+
+      <div class="ic-card-carousel" data-card-carousel aria-roledescription="carousel" aria-label="Other sectors">
+        <div class="ic-card-carousel__viewport" data-cc-viewport>
+          <ul class="ic-card-carousel__track">
+            <li><a class="ic-card" href="car-dealership-showroom.html">
+              <img src="images/home-sector-02-car-dealership.webp" alt="Illustration of a car showroom with a cleaner outside" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Car dealership &amp; Showroom</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="business-office.html">
+              <img src="images/home-sector-03-business-office.webp" alt="Illustration of a cleaner washing an office building" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Business Office</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="hospitality-accommodation.html">
+              <img src="images/home-sector-04-hospitality.webp" alt="Illustration of cleaners working on a hotel facade" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Hospitality &amp; Accommodation</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="professional-practice.html">
+              <img src="images/home-sector-05-professional-practice.webp" alt="Illustration of two cleaners organising an office room" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Professional Practice</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="healthcare-medical-centre.html">
+              <img src="images/home-sector-06-healthcare.webp" alt="Illustration of a cleaner mopping outside a hospital" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Healthcare &amp; Medical Centre</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="property-management.html">
+              <img src="images/home-sector-07-property-management.webp" alt="Illustration of two cleaners working in a property" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Property Management</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="public-sector.html">
+              <img src="images/home-sector-08-public-sector.webp" alt="Illustration of a cleaner in front of a public building" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Public Sector</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="retail-gym-and-leisure.html">
+              <img src="images/home-sector-09-retail-gym-leisure.webp" alt="Illustration of a cleaner wiping gym equipment" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Retail, Gym and Leisure</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="school-education.html">
+              <img src="images/home-sector-10-school-education.webp" alt="Illustration of two cleaners in a classroom" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">School &amp; Education</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="tv-radio-film-studio.html">
+              <img src="images/home-sector-11-tv-radio-film.webp" alt="Illustration of a cleaner next to a film clapperboard" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">TV, Radio &amp; Film Studio</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="church-community-centre.html">
+              <img src="images/home-sector-12-church-community.webp" alt="Illustration of two cleaners at a church" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Church &amp; Community Centre</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+            <li><a class="ic-card" href="residential-homes.html">
+              <img src="images/home-sector-13-residential-homes.webp" alt="Illustration of two cleaners cleaning a sofa at home" width="600" height="600" loading="lazy">
+              <span class="ic-card__label">Residential Homes</span>
+              <span class="ic-card__btn" aria-hidden="true">Find Out More</span>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="ic-card-carousel__nav">
+          <button class="ic-card-carousel__arrow ic-card-carousel__arrow--prev" type="button" data-cc-prev aria-label="Previous">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          </button>
+          <div class="ic-card-carousel__dots" data-cc-dots></div>
+          <button class="ic-card-carousel__arrow ic-card-carousel__arrow--next" type="button" data-cc-next aria-label="Next">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. FREE QUOTE BAND (v2)  → same block as the Home (save it as an Elementor template); button → /contact
+       ========================================================= -->
+  <section class="ic-quote-cta" aria-labelledby="ic-quote-title">
+    <div class="ic-container">
+      <div class="ic-quote-cta__content">
+        <h2 class="ic-h2" id="ic-quote-title">Get a Free, No-Obligation Cleaning Quote in Adelaide</h2>
+        <p>Tell us a bit about your space and we'll be in touch within hours — not days. No pushy sales calls. Just an honest conversation about what you need.</p>
+        <ul class="ic-quote-cta__checks">
+          <li>Free on-site assessment</li>
+          <li>Custom quote within 24 hours</li>
+          <li>No lock-in contracts</li>
+          <li>Seamless changeover if switching</li>
+          <li>Direct line to management</li>
+        </ul>
+        <a class="ic-btn ic-btn--light" href="contact.html">Request My Free Quote
+          <svg viewBox="0 0 8 14" aria-hidden="true"><path d="m1 1 6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
