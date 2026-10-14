@@ -40,34 +40,44 @@
       <ul class="ic-nav__list">
         <li class="ic-nav__item"><a href="index.html">Home</a></li>
         <li class="ic-nav__item is-active"><a href="about.html" aria-current="page">About Us</a></li>
-        <li class="ic-nav__item has-sub">
+        <li class="ic-nav__item has-sub has-mega">
           <a href="index.html#sectors" aria-haspopup="true">Sectors</a>
-          <ul class="ic-nav__sub">
-            <li><a href="banking-and-finance.html">Banking and Finance</a></li>
-            <li><a href="car-dealership-showroom.html">Car dealership &amp; Showroom</a></li>
-            <li><a href="business-office.html">Business Office</a></li>
-            <li><a href="hospitality-accommodation.html">Hospitality &amp; Accommodation</a></li>
-            <li><a href="professional-practice.html">Professional Practice</a></li>
-            <li><a href="healthcare-medical-centre.html">Healthcare &amp; Medical Centre</a></li>
-            <li><a href="property-management.html">Property Management</a></li>
-            <li><a href="public-sector.html">Public Sector</a></li>
-            <li><a href="retail-gym-and-leisure.html">Retail, Gym and Leisure</a></li>
-            <li><a href="school-education.html">School &amp; Education</a></li>
-            <li><a href="tv-radio-film-studio.html">TV, Radio &amp; Film Studio</a></li>
-            <li><a href="church-community-centre.html">Church &amp; Community Centre</a></li>
-            <li><a href="residential-homes.html">Residential Homes</a></li>
-          </ul>
+          <div class="ic-mega">
+            <div class="ic-mega__inner">
+              <p class="ic-mega__eyebrow">Cleaning sectors</p>
+              <ul class="ic-mega__list">
+                <li><a href="banking-and-finance.html">Banking and Finance</a></li>
+                <li><a href="car-dealership-showroom.html">Car dealership &amp; Showroom</a></li>
+                <li><a href="business-office.html">Business Office</a></li>
+                <li><a href="hospitality-accommodation.html">Hospitality &amp; Accommodation</a></li>
+                <li><a href="professional-practice.html">Professional Practice</a></li>
+                <li><a href="healthcare-medical-centre.html">Healthcare &amp; Medical Centre</a></li>
+                <li><a href="property-management.html">Property Management</a></li>
+                <li><a href="public-sector.html">Public Sector</a></li>
+                <li><a href="retail-gym-and-leisure.html">Retail, Gym and Leisure</a></li>
+                <li><a href="school-education.html">School &amp; Education</a></li>
+                <li><a href="tv-radio-film-studio.html">TV, Radio &amp; Film Studio</a></li>
+                <li><a href="church-community-centre.html">Church &amp; Community Centre</a></li>
+                <li><a href="residential-homes.html">Residential Homes</a></li>
+              </ul>
+            </div>
+          </div>
         </li>
-        <li class="ic-nav__item has-sub">
+        <li class="ic-nav__item has-sub has-mega">
           <a href="index.html#services" aria-haspopup="true">Services</a>
-          <ul class="ic-nav__sub">
-            <li><a href="builders-cleaning.html">Builder’s Cleaning</a></li>
-            <li><a href="upholstery-and-carpet-cleaning.html">Upholstery and Carpet Cleaning</a></li>
-            <li><a href="deep-cleaning.html">Deep Cleaning</a></li>
-            <li><a href="exit-cleaning.html">Exit Cleaning</a></li>
-            <li><a href="window-cleaning.html">Window Cleaning</a></li>
-            <li><a href="carpark-and-facade-cleaning.html">Carpark and Facade Cleaning</a></li>
-          </ul>
+          <div class="ic-mega">
+            <div class="ic-mega__inner">
+              <p class="ic-mega__eyebrow">Cleaning services</p>
+              <ul class="ic-mega__list">
+                <li><a href="builders-cleaning.html">Builder’s Cleaning</a></li>
+                <li><a href="upholstery-and-carpet-cleaning.html">Upholstery and Carpet Cleaning</a></li>
+                <li><a href="deep-cleaning.html">Deep Cleaning</a></li>
+                <li><a href="exit-cleaning.html">Exit Cleaning</a></li>
+                <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                <li><a href="carpark-and-facade-cleaning.html">Carpark and Facade Cleaning</a></li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="ic-nav__item"><a href="blog.html">Blog</a></li>
         <li class="ic-nav__item"><a href="contact.html">Contact</a></li>
@@ -226,82 +236,45 @@
   </div>
 
   <!-- =========================================================
-       4. FAQ  → Elementor: Heading + Text + Button + 2 × Accordion
+       4. FAQ (v2)  → Elementor: Heading + Accordion widget (1 open at a time) + Text + Button
+       Questions about the company. The general / service questions live on the Home page.
        ========================================================= -->
-  <section class="ic-section ic-faq" aria-labelledby="faq-title">
+  <section class="ic-faq-list" aria-labelledby="faq-title">
     <div class="ic-container">
-      <div class="ic-center-cta ic-faq__head">
-        <h2 class="ic-h2" id="faq-title">Frequently asked questions</h2>
+      <h2 class="ic-h2 ic-center" id="faq-title">Frequently asked questions</h2>
+      <div class="ic-faq-list__items">
+        <details name="faq-about">
+          <summary>What does “Invictus” mean?</summary>
+          <div class="ic-faq-list__answer"><p>Invictus means unconquerable or undefeated in Latin. It is also the name of a poem written by William Ernest Henley in 1875, which has been a source of inspiration for our company. Through all adversities and misfortunes life can put us through, we want to be that undefeated partner everyone can rely on.</p></div>
+        </details>
+        <details name="faq-about">
+          <summary>Do you have high staff turnover?</summary>
+          <div class="ic-faq-list__answer"><p>We have a small but very committed team. We aim to be the employer of choice in the cleaning industry, as such we provide our staff with appropriate training and competitive remuneration.</p></div>
+        </details>
+        <details name="faq-about">
+          <summary>Will we always have the same cleaner?</summary>
+          <div class="ic-faq-list__answer"><p>Yes, as far as is practical. We always try to maintain continuity by using the same staff on a client’s contract. This helps to build extensive knowledge of the site, a healthy relationship and trust between the cleaning team and the client, and leads to increased security for our customers.</p></div>
+        </details>
+        <details name="faq-about">
+          <summary>Do your staff receive training?</summary>
+          <div class="ic-faq-list__answer"><p>Yes. Each of our cleaners receives comprehensive in-house and in-situ training in all areas required for them to skilfully perform their duties. All Health and Safety issues and key company policies are covered in their initial training and induction.</p></div>
+        </details>
+        <details name="faq-about">
+          <summary>Are all your staff vetted?</summary>
+          <div class="ic-faq-list__answer"><p>Yes. As part of our recruitment process, following interview, we request a previous employer’s reference and required proof of address and entitlement to work in Australia. We also require a copy of their passport and driving licence for our records. We also require current police check and business insurance certificates to ensure additional security for our clients.</p></div>
+        </details>
+        <details name="faq-about">
+          <summary>Will the changeover to Invictus Clean be smooth?</summary>
+          <div class="ic-faq-list__answer"><p>Of course. We have experience in dealing with new office cleaning contracts, which allows us to be thorough with planning and client liaison in order to make the changeover a seamless process. The only difference you will notice is the planned improvement in service and standards.</p></div>
+        </details>
+        <details name="faq-about">
+          <summary>Can you provide references?</summary>
+          <div class="ic-faq-list__answer"><p>Yes. Once you have received the formal quotation from us and are serious about going ahead, we will be happy to provide you with customer references to help you finalise your decision.</p></div>
+        </details>
+      </div>
+      <div class="ic-faq-list__cta">
         <p>If you have any other questions, don’t hesitate to contact us.</p>
         <a class="ic-btn" href="contact.html">Get in Touch</a>
-      </div>
-
-      <div class="ic-faq__grid">
-        <div class="ic-accordion">
-          <details>
-            <summary>What does “Invictus” mean?</summary>
-            <p>Invictus means unconquerable or undefeated in Latin. It is also the name of a poem written by William Ernest Henley in 1875, which has been a source of inspiration for our company. Through all adversities and misfortunes life can put us through, we want to be that undefeated partner everyone can rely on.</p>
-          </details>
-          <details>
-            <summary>What time do you arrive on site?</summary>
-            <p>We have a completely flexible approach and will attend your premises at the time that suits your use of the site. This can be early mornings, before any of your staff arrive, during the day, or in the evening after everyone has left for the day.</p>
-          </details>
-          <details>
-            <summary>Are you fully insured?</summary>
-            <p>Each cleaner, as a subcontractor, have their own business insurance cover which, amongst other things, covers Public Liability for at least AUS 5,000,000.</p>
-          </details>
-          <details>
-            <summary>How often do you clean a site?</summary>
-            <p>Our service is tailored entirely to your requirements. For some, we will only attend once or twice per week. For other larger clients, we will have many cleaners on site seven days per week or even multiple times during the day. We build our service around what you need.</p>
-          </details>
-          <details>
-            <summary>Do you have high staff turnover?</summary>
-            <p>We have a small but very committed team. We aim to be the employer of choice in the cleaning industry, as such we provide our staff with appropriate training and competitive remuneration.</p>
-          </details>
-          <details>
-            <summary>Will we always have the same cleaner?</summary>
-            <p>Yes, as far as is practical. We always try to maintain continuity by using the same staff on a client’s contract. This helps to build extensive knowledge of the site, a healthy relationship and trust between the cleaning team and the client, and leads to increased security for our customers.</p>
-          </details>
-          <details>
-            <summary>Do your staff receive training?</summary>
-            <p>Yes. Each of our cleaners receives comprehensive in-house and in-situ training in all areas required for them to skilfully perform their duties. All Health and Safety issues and key company policies are covered in their initial training and induction.</p>
-          </details>
-          <details>
-            <summary>Are all your staff vetted?</summary>
-            <p>Yes. As part of our recruitment process, following interview, we request a previous employer’s reference and required proof of address and entitlement to work in Australia. We also require a copy of their passport and driving licence for our records. We also require current police check and business insurance certificates to ensure additional security for our clients.</p>
-          </details>
-        </div>
-
-        <div class="ic-accordion">
-          <details>
-            <summary>How do we pay you?</summary>
-            <p>Both Commercial and Residential clients are invoiced at the end of each calendar month and are expected to proceed with the payment on the fortnight from invoice date.</p>
-          </details>
-          <details>
-            <summary>Do you supply everything required?</summary>
-            <p>Yes. Generally, we supply all the labour, equipment, machinery and materials required to carry out all our cleaning tasks within the agreed price. Additionally, we regularly supply consumables such as toilet rolls, hand towels, bin liners etc., which would be invoiced at the end of each calendar month.</p>
-          </details>
-          <details>
-            <summary>What are your hourly rates?</summary>
-            <p>We believe our prices are very competitive, but do not publish a fixed hourly rate. All jobs are priced according to the service required, whether it be a domestic or commercial service, a builders clean or a one-off deep clean. A number of variables will impact the final calculation of the rate such as equipment and materials.</p>
-          </details>
-          <details>
-            <summary>Will the changeover to Invictus Clean be smooth?</summary>
-            <p>Of course. We have experience in dealing with new office cleaning contracts, which allows us to be thorough with planning and client liaison in order to make the changeover a seamless process. The only difference you will notice is the planned improvement in service and standards.</p>
-          </details>
-          <details>
-            <summary>Can you provide references?</summary>
-            <p>Yes. Once you have received the formal quotation from us and are serious about going ahead, we will be happy to provide you with customer references to help you finalise your decision.</p>
-          </details>
-          <details>
-            <summary>Can you unlock/lock and alarm the building?</summary>
-            <p>Yes. This is a regular service offered to all our clients, large or small. This enables us to carry out our cleaning service outside normal working hours, thus minimising disruption to your staff.</p>
-          </details>
-          <details>
-            <summary>Are we issued a cleaning contract?</summary>
-            <p>Yes. Contracts are signed before going ahead with any work.</p>
-          </details>
-        </div>
       </div>
     </div>
   </section>

@@ -8,7 +8,7 @@ and each page was compared side by side with the live one (total height within 1
 
 ## What changed in v2
 
-Animations and carousels (4 changes). Everything else is identical to `Site-HTML/`. In the code, look for the `v2` comments in
+Animations, carousels, mega menu, card buttons, the new FAQ and 3 new Home sections (10 changes). Where a section below (6.x) disagrees with this list, this list wins. Everything else is identical to `Site-HTML/`. In the code, look for the `v2` comments in
 `index.html`, `about.html`, the **"v2 — ANIMATIONS"** block at the end of `css/style.css` and at the end of `js/main.js`.
 
 ### 1. Home hero: typing headline
@@ -42,16 +42,79 @@ Animations and carousels (4 changes). Everything else is identical to `Site-HTML
 - **Elementor:** **Image Carousel** widget → *Slides to show: 1* · *Effect: Fade* · *Autoplay speed:* 4500 · *Pause on hover: **No*** · *Pause on interaction: No* ·
   *Navigation: Arrows and Dots* · *Image size:* full · *Image Stretch: Yes*.
 
-### 4. Home: "Our Sectors" as a carousel
+### 4. Home: "Our Sectors" and "Our Services" as carousels
 - Same cards as before (border, illustration, label), now in a carousel. Structure based on "Sectors we support"
   (totalclean.co.uk): centred title (no line below it), **4 cards per view**, square arrow buttons **outside** the cards
   (left/right) and **one dot per page** (4 pages for the 13 sectors). No autoplay. Arrows fade out at the start/end.
 - Tablet: 3 cards per view · Mobile: 1 card + a peek of the next one; on both the arrows sit next to the dots. Swipe works on touch.
-- "Our Services" (6 cards) stays as a grid.
+- **"Our Services" (6 cards) uses the same carousel** (2 pages on desktop and tablet). Same Elementor settings.
 - **Elementor:** **Loop Carousel** (Pro; best option, the card is a Loop Item template = Image + label, link on the whole box)
   or **Image Carousel** with captions → *Slides to show:* 4 (tablet 3, mobile 1) · *Slides to scroll:* 4 (tablet 3, mobile 1) ·
   *Autoplay: No* · *Infinite loop: No* · *Navigation: Arrows and Dots* · *Space between:* 30px.
   Arrows: 44×44px, border 2px Primary, radius 8px, white background, hover = Primary background + white icon.
+
+### 5. Header: mega menu for "Sectors" and "Services" (all pages)
+- Reference: the client's screenshot of totalclean.co.uk. Hovering "Sectors" or "Services" opens a **full-width panel**
+  under the header: small title in Accent (`CLEANING SECTORS` / `CLEANING SERVICES`, 12.5px, uppercase, letter spacing 0.1em)
+  + links in **3 columns**, each row separated by a thin line (`#E6EDF0`). Hover on a link: Accent color + small arrow.
+- Small chevron next to "Sectors"/"Services" that flips when the panel is open.
+- The panel stays open for ~0.3s after the mouse leaves, so moving diagonally from the menu to a link doesn't close it.
+  Also opens with the keyboard (Tab).
+- Mobile/tablet menu (hamburger) is unchanged.
+- 👉 **Full step-by-step (in Portuguese): [`COMO-FAZER-O-MEGA-MENU.md`](COMO-FAZER-O-MEGA-MENU.md).** Summary below.
+- **Elementor — yes, this is native:** use the **Menu** widget (Elementor Pro, the newer one, not the legacy "Nav Menu"):
+  1. Add the items Home, About Us, Sectors, Services, Blog, Contact.
+  2. On "Sectors" and "Services": *Dropdown content* → **Mega Menu** → *Edit template*: a container with a Heading
+     (the small Accent title) + a container in **3 columns** with the links (Icon List or Text Editor), bottom border 1px `#E6EDF0` on each item.
+  3. Widget settings: *Content width* → **Full width** · *Open dropdown on* → **Hover** · *Animation* → Fade.
+  4. Style the panel: white background, padding `30px 43px 40px`, shadow `0 26px 40px -14px rgba(41,77,93,.2)`.
+
+### 6. Sector/service cards: "Find Out More" button
+- Each card in both carousels now has a small **"Find Out More"** button at the bottom (Primary background, white text,
+  12px/500, padding `10px 22px`, radius 4.8px; darker `#3A6272` when the card is hovered). Card height: **310px**.
+- The **whole card is still the link**; the button is only a visual cue that the card is clickable.
+- **Elementor:** in the Loop Item template (or Image Box), add a **Button** widget under the label, linking to the same page.
+
+### 7. FAQ: new "simple list" style, on the Home **and** on About
+- Reference: the client's screenshot (totalclean.co.uk). Light background `#F1F5F7`, centered H2, one column (max 1080px),
+  question text (**17px**, mobile 15px, weight 400, Primary; Accent on hover), thin **"+"** on the right that turns into **"–"**,
+  1px line `#D5DEE2` under each row. **Only one answer open at a time.**
+- The 15 existing questions were **split, not duplicated** (same content on two pages hurts SEO):
+  - **Home** (new section between the testimonials and Contact), title **"Cleaning Services Adelaide FAQs"**, 8 service questions:
+    arrival time, how often, supplies, hourly rates, insurance, unlock/lock & alarm, contract, payment.
+  - **About** (replaces the old 2 dark accordions), title "Frequently asked questions", 7 company questions:
+    what "Invictus" means, staff turnover, same cleaner, training, vetting, smooth changeover, references
+    + the "If you have any other questions…" text and "Get in Touch" button below the list.
+- **Elementor:** **Accordion** widget (the nested one) → *Max items expanded: One* · *Default state: All collapsed* ·
+  icon "+" / active icon "–" on the right · Title typography 17px/400 (mobile 15px), padding 21px 20px · Divider/border bottom 1px `#D5DEE2` per item ·
+  container max width 1080px, centered. Section background `#F1F5F7`, padding `85px 0 95px`.
+
+### 8. Home: "Why Adelaide Trusts Invictus Clean" band (replaces the values row)
+- Reference: "Peace of Mind" (totalclean.co.uk). The **same 4 values** (Eco-friendly, Safe, Industry Expertise, Fair Pricing)
+  moved out of the "Professional cleaners in Adelaide" block into their own band, right after it.
+- Band: background **Primary**, padding `85px 0 95px`, white H2 + intro line (16px, 90% opacity):
+  "No hidden fees, no surprises. What we quote is what you pay. We deliver what we promise." (copy from the Commercial Cleaning page).
+- 4 **white** cards, radius 12px, padding `36px 22px 32px`, Primary text; icons now in Primary (`home-value-0X-*-dark.webp`).
+- The small "Contact us for your free quote now! / Get in Touch" line under the old values was removed (the new quote band does that job).
+- **Elementor:** Container (background Primary) + Heading + Text Editor + 4 **Icon Box** (image icon) in a 4-column container (2 on tablet, 1 on mobile).
+
+### 9. Home: "Our Cleaning Process" (new, after Our Services)
+- Reference: "Our ... Office Cleaning Process" (totalclean.co.uk). Background `#F1F5F7`, H2 + intro, **4 numbered steps**
+  in the site's card style (2px Primary border, radius 8px, white). Number in a 52px Primary circle.
+- Steps (copy adapted from the landing pages + FAQ): 1 Tell us about your space · 2 Free on-site assessment ·
+  3 Custom quote within 24 hours · 4 A seamless start.
+- **Elementor:** 4 **Icon Box** widgets — instead of an icon, use a Heading with the number styled as a circle
+  (or Icon Box with a number icon). 4 columns → 2 on tablet → 1 on mobile.
+
+### 10. Home: free quote band (new, right after the process)
+- Reference: "Request a ... quote ... today" (totalclean.co.uk). Background photo `home-quote-cta-bg.webp`
+  (own team photo, gloved hand + cloth) with a dark overlay `rgba(31,58,70,0.84)`; white text, centered.
+- H2 "Get a Free, No-Obligation Cleaning Quote in Adelaide" + paragraph + checklist (peach circle with a Primary check):
+  Free on-site assessment · Custom quote within 24 hours · No lock-in contracts · Seamless changeover if switching ·
+  Direct line to management (all copied from the landing pages).
+- White button "Request My Free Quote ›" → jumps to the contact form at the bottom of the Home (`#contact`).
+- **Elementor:** Container with *Background: Classic (image)* + *Background Overlay* · Heading · Text Editor ·
+  **Icon List** (icon: check in a circle, color Peach) · Button (white background, Primary text) linking to `#contact`.
 
 ---
 
