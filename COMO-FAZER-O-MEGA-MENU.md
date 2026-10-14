@@ -26,8 +26,8 @@ abre um painel largo com um título pequeno em terracota e os links em 3 colunas
 1. No painel do WordPress: **Templates → Theme Builder → Header → Add New**.
 2. Dê o nome **Header principal** e clique em **Create Template**.
 3. Feche a janela de modelos prontos (o "X" no canto). Você vai montar do zero.
-4. Monte o container do cabeçalho como está no `GUIA-ELEMENTOR.md` (seção 4): largura total, altura **116px**,
-   laterais **43px**, fundo branco. Coloque o **logo** à esquerda.
+4. Monte o container do cabeçalho como está no `GUIA-ELEMENTOR.md` (seção 3): largura **1360px** (*Boxed*), altura mínima **112px**,
+   fundo branco. Coloque o **logo** à esquerda.
 
 > **Importante:** o container do cabeçalho precisa estar com **Content Width: Full Width**.
 > É ele que define a largura do painel do mega menu.
@@ -73,10 +73,11 @@ Isso cria um "painel vazio" embaixo de cada um desses itens, onde você monta o 
    ("arraste o widget aqui"). Esse é o painel.
 2. Selecione o **container** desse painel e configure:
    - **Direction:** coluna (vertical)
-   - **Padding:** `30px` em cima, `43px` nas laterais, `40px` embaixo
+   - **Padding:** `32px` em cima, `48px` embaixo (laterais: as do container padrão)
+   - **Content Width:** *Boxed*, **1360px** (a mesma largura do cabeçalho, para os links alinharem com o logo)
    - **Background:** branco
    - **Box Shadow:** horizontal `0`, vertical `26`, blur `40`, spread `-14`, cor `rgba(41,77,93,0.2)`
-   - **Border:** só em cima, 1px, cor `#EDF1F3`
+   - **Border:** só em cima, 1px, cor **Tint** (`#F1F5F7`)
 3. **Título pequeno:** arraste um widget **Heading** para dentro do painel.
    - Texto: `Cleaning sectors`
    - **HTML Tag: `span` ou `p`** (não use H2/H3, senão o Google vai ler esse título como um título de verdade em todas as páginas)
@@ -100,7 +101,7 @@ Isso cria um "painel vazio" embaixo de cada um desses itens, onde você monta o 
 
    - Na aba **Style** do Icon List:
      - **Divider: Yes**, estilo sólido, espessura **1px**, cor `#E6EDF0` (são as linhas entre os itens)
-     - **Space Between:** `26px`
+     - **Space Between:** `24px` (12px acima e 12px abaixo de cada link)
      - **Text:** Quicksand **14.5px**, peso **400**, cor **Primary**; cor no **Hover: Accent**
    - O divisor do Icon List só desenha linha **entre** os itens. Para ter linha também embaixo do último,
      vá em **Advanced → Border** do widget e coloque **só embaixo**, 1px, `#E6EDF0`.
@@ -134,7 +135,7 @@ Selecione o widget **Menu** inteiro e, na aba **Content**, procure a parte de **
 | **Breakpoint** (quando vira menu de celular) | **Tablet (1024px)** |
 
 Na aba **Style**:
-- **Menu Items:** Quicksand **13.73px**, peso **300**, cor **Primary**, espaço entre itens **33px**
+- **Menu Items:** fonte global **Body**, cor **Primary**, espaço entre itens **32px**
 - **Pointer** (efeito ao passar o mouse): **Underline**, 1px, cor Primary
 - **Dropdown / Animation:** **Fade**
 
