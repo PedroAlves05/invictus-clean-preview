@@ -167,7 +167,11 @@ Never set fixed pixel widths on columns.
    - H1 with **typing animation**: *Animated Headline* (Pro) → *Typing* · Before text `Commercial & Residential Cleaning` ·
      Animated text: Solutions / You Can Trust / Across Adelaide / Done Right (one per line) · loop · ~2200ms · color Accent · HTML tag H1.
    - Text (max 32rem, 16px below the title) + "Get a Quote" button (24px below), both left-aligned.
-   - Illustration `home-hero.webp` on the right. Mobile: 1 column, image below.
+   - Right: **photo carousel** (client feedback: real photos instead of the illustration) — *Image Carousel*: 1 slide ·
+     *Fade* · autoplay 4500ms · pause on hover **No** · **dots only** (no arrows) · image ratio 4:3 · radius 8px.
+     Photos (different from the About ones): `home-hero-01-clinic-bench` · `02-upholstery` · `03-dental-clinic` ·
+     `04-residential-kitchen` · `05-outdoor-area`. The old illustration `home-hero.webp` is no longer used.
+   - Mobile: 1 column, carousel below the button.
 2. **Professional cleaners in Adelaide** — two halves, center aligned: photo `home-professional.webp` (16:10, cover) | text right-aligned
    (H2 → 24px → 2 paragraphs → 24px → "Read More"). Mobile: text first (left-aligned), photo below.
 3. **Why Adelaide Trusts Invictus Clean** — Primary band, white H2 + intro (16px, 90% opacity), **four equal** white cards
@@ -194,12 +198,16 @@ Never set fixed pixel widths on columns.
 10. **Contact us** — contact split 45/55, gap 64px: contact info | form ("Send").
 
 ### 5.2 About (`about.html` → `/about`)
-1. **Hero** — two halves, 48px gap. Left: H1 + intro (24px below) and, under it, **Vision + Mission** dark panels (two halves, global gap).
-   Right: **photo carousel** (4:3) — *Image Carousel*: 1 slide · *Fade* · autoplay 4500ms · **pause on hover: No** · arrows + dots.
-   Photos: `about-carousel-01…06-*.webp`.
-   Below, full width (global gap above): **Our Values** dark panel with **four equal** columns (TRUST / PEOPLE FIRST / QUALITY / COST-EFFICIENCY).
-   Mobile: title → photos → vision → mission → values (all stacked).
-2. **A New option in the local cleaning industry** — H2 centered + 3 justified paragraphs; 48px space below.
+Order changed after client feedback: **the story first**, vision / mission / values after.
+1. **Hero** — two halves, 48px gap, vertically centered.
+   Left: **H1** "About Invictus Clean Adelaide" → 24px → **H2** "A New option in the local cleaning industry" (Large style) →
+   16px → the 3 story paragraphs.
+   Right: **photo carousel** (4:3, radius 8px) — *Image Carousel*: 1 slide · *Fade* · autoplay 4500ms · **pause on hover: No** ·
+   arrows + dots. Photos: `about-carousel-01…06-*.webp`.
+   Mobile: text first, photos below.
+2. **Our Vision, Mission and Values** — H2 centered + intro line ("Our vision, mission and values are the source of
+   inspiration…") → 48px → **Vision + Mission** dark panels (two halves, global gap) → **Our Values** dark panel with
+   **four equal** columns (TRUST / PEOPLE FIRST / QUALITY / COST-EFFICIENCY). Mobile: everything stacked.
 3. **Scrolling band** — Primary band in the content width, white Large text scrolling left (40s loop, pause on hover),
    padding 24px top/bottom. Elementor: *HTML widget* with the `.ic-marquee` markup from `about.html` + its CSS.
 4. **Frequently asked questions** — FAQ list block (7 questions) + "If you have any other questions…" + "Get in Touch" (48px below).
@@ -243,7 +251,7 @@ Use `Site-HTML-v2/images/` (optimized; same names as `Documentos/Images/wordpres
 | Files | Where |
 |---|---|
 | `global-*` | Logo, white logo, favicon (`global-favicon-512.png`), footer artwork |
-| `home-hero.webp`, `home-professional.webp`, `home-quote-cta-bg.webp` | Home |
+| `home-hero-01…05-*.webp`, `home-professional.webp`, `home-quote-cta-bg.webp` | Home (hero carousel, about block, quote band) |
 | `home-value-0X-*-dark.webp` (4) | "Why" cards |
 | `home-sector-01…13-*` / `home-service-01…06-*` | Carousel cards **and** the illustration of each sector/service page |
 | `about-carousel-01…06-*` | About photo carousel |

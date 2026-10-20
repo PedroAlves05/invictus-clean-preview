@@ -369,6 +369,7 @@ figure { margin: 0; }
 .ic-slider__viewport {
   position: relative;
   aspect-ratio: 4 / 3;
+  border-radius: var(--ic-radius-md);
   overflow: hidden;
   touch-action: pan-y;
 }
@@ -1023,25 +1024,29 @@ figure { margin: 0; }
   .ic-contact__grid { grid-template-columns: 1fr; }
 }
 
-/* ---------- ABOUT · Hero (intro, photo slider, vision / mission / values) ---------- */
+/* ---------- ABOUT · Hero (title + story | photo slider) ---------- */
 .ic-about-hero__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "intro media"
-    "cards media";
   gap: var(--ic-space-7);
-  align-items: start;
+  align-items: center;
 }
-.ic-about-hero__intro { grid-area: intro; }
-.ic-about-hero__intro p { margin-top: var(--ic-space-5); }
-.ic-about-hero__media { grid-area: media; }
-.ic-about-hero__cards {
-  grid-area: cards;
+.ic-about-hero__subtitle {
+  margin-top: var(--ic-space-5);
+  font-size: var(--ic-fs-large);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.ic-about-hero__story { margin-top: var(--ic-space-4); }
+
+/* ---------- ABOUT · Vision, mission and values ---------- */
+.ic-vmv { padding-top: 0; }
+.ic-vmv__intro { max-width: 48rem; margin: var(--ic-space-4) auto 0; text-align: center; }
+.ic-vmv__cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--ic-gap);
+  margin-top: var(--ic-head-gap);
 }
 .ic-values-panel { margin-top: var(--ic-gap); padding: var(--ic-space-6) var(--ic-space-5); }
 .ic-values-panel__grid {
@@ -1053,15 +1058,12 @@ figure { margin: 0; }
 .ic-values-panel__label { font-size: var(--ic-fs-body); font-weight: 700; line-height: 1.9; letter-spacing: 0.01em; }
 .ic-values-panel__grid p { margin-top: var(--ic-space-2); }
 
-.ic-about-story { padding-block: 0 var(--ic-space-7); }
-.ic-about-story .ic-text-justify { margin-top: var(--ic-space-5); }
-
 @media (max-width: 1024px) {
   .ic-values-panel__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 767px) {
-  .ic-about-hero__grid { grid-template-columns: 1fr; grid-template-areas: "intro" "media" "cards"; gap: var(--ic-space-6); }
-  .ic-about-hero__cards,
+  .ic-about-hero__grid { grid-template-columns: 1fr; gap: var(--ic-space-6); }
+  .ic-vmv__cards,
   .ic-values-panel__grid { grid-template-columns: 1fr; }
 }
 

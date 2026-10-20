@@ -170,8 +170,29 @@
           </div>
         </div>
       </div>
+      <!-- v3: real photos instead of the illustration (client feedback). Same photo slider as About:
+           Elementor → Image Carousel, 1 slide, Fade, autoplay 4500ms, pause on hover No, dots only. -->
       <div class="ic-hero__media">
-        <img src="images/home-hero.webp" alt="Commercial cleaning illustration for Adelaide homes and businesses" width="1400" height="670" fetchpriority="high">
+        <div class="ic-slider ic-slider--hero" data-slider aria-roledescription="carousel" aria-label="Our team at work across Adelaide">
+          <div class="ic-slider__viewport">
+            <figure class="ic-slider__slide is-active" aria-roledescription="slide" aria-label="1 of 5">
+              <img src="images/home-hero-01-clinic-bench.webp" alt="Invictus Clean cleaner wiping a clinic benchtop" width="1200" height="900" fetchpriority="high">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="2 of 5">
+              <img src="images/home-hero-02-upholstery.webp" alt="Upholstery being deep cleaned with a steam extractor" width="1200" height="900" loading="lazy">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="3 of 5">
+              <img src="images/home-hero-03-dental-clinic.webp" alt="Invictus Clean cleaner disinfecting a dental chair" width="1200" height="900" loading="lazy">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="4 of 5">
+              <img src="images/home-hero-04-residential-kitchen.webp" alt="Spotless residential kitchen in Adelaide after a clean" width="1200" height="900" loading="lazy">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="5 of 5">
+              <img src="images/home-hero-05-outdoor-area.webp" alt="Invictus Clean team member cleaning an outdoor play area" width="1200" height="900" loading="lazy">
+            </figure>
+          </div>
+          <div class="ic-slider__dots" data-slider-dots></div>
+        </div>
       </div>
     </div>
   </section>

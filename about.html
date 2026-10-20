@@ -125,53 +125,65 @@
 <main id="main">
 
   <!-- =========================================================
-       1. HERO + VISION / MISSION / VALUES
-       → Elementor: Container (2 columns) + Container (2 Icon Box) + Container (dark, 4 columns)
+       1. HERO: ABOUT US + STORY  → Elementor: Container (2 halves) — Heading H1 + Heading H2 + Text Editor | Image Carousel
+       v3 (client feedback): the story comes first; vision / mission / values moved to the next section.
        ========================================================= -->
   <section class="ic-section ic-about-hero">
-    <div class="ic-container">
-      <div class="ic-about-hero__grid">
-        <div class="ic-about-hero__intro">
-          <h1 class="ic-h1">About Invictus Clean Adelaide</h1>
-          <p>Our vision, mission and values are the source of inspiration for continuously improving our future and growth.</p>
+    <div class="ic-container ic-about-hero__grid">
+      <div class="ic-about-hero__intro">
+        <h1 class="ic-h1">About Invictus Clean Adelaide</h1>
+        <h2 class="ic-about-hero__subtitle">A New option in the local cleaning industry</h2>
+        <div class="ic-about-hero__story">
+          <p>Invictus Clean (formerly Bravo Clean) is a family-run company, operating in Adelaide since 2021.</p>
+          <p>Born from our experience in South Australia cleaning industry, we have slowly built an excellent reputation for our energy, attention to detail and reliability. Steadily, new businesses, home owners and real estate agencies have been requesting our services, forcing us to expand and build a team.</p>
+          <p>By the end of 2023 Invictus Clean Pty Ltd has been registered as a private company with this simple mission to help our clients maintain and improve the quality of their working/living environment by providing high standard and cost-efficient cleaning solutions.</p>
         </div>
+      </div>
 
-        <!-- v2: photo carousel (real team photos) → Elementor: Image Carousel widget, Effect "Fade",
-             autoplay 4s, pause on hover, arrows + dots, 1 slide per view -->
-        <div class="ic-about-hero__media">
-          <div class="ic-slider" data-slider aria-roledescription="carousel" aria-label="The Invictus Clean team at work">
-            <div class="ic-slider__viewport">
-              <figure class="ic-slider__slide is-active" aria-roledescription="slide" aria-label="1 of 6">
-                <img src="images/about-carousel-01-team.webp" alt="The Invictus Clean team in Adelaide" width="1116" height="860" fetchpriority="high">
-              </figure>
-              <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="2 of 6">
-                <img src="images/about-carousel-02-cleaner-smiling.webp" alt="Smiling Invictus Clean cleaner wiping a kitchen benchtop" width="1116" height="860" loading="lazy">
-              </figure>
-              <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="3 of 6">
-                <img src="images/about-carousel-03-victor-van.webp" alt="Victor, Invictus Clean team leader, beside the branded cleaning van" width="1116" height="860" loading="lazy">
-              </figure>
-              <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="4 of 6">
-                <img src="images/about-carousel-04-handrail.webp" alt="Invictus Clean cleaner wiping a handrail with a microfibre cloth" width="1116" height="860" loading="lazy">
-              </figure>
-              <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="5 of 6">
-                <img src="images/about-carousel-05-office-vacuuming.webp" alt="Invictus Clean cleaner vacuuming an office with a backpack vacuum" width="1116" height="860" loading="lazy">
-              </figure>
-              <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="6 of 6">
-                <img src="images/about-carousel-06-reception.webp" alt="Invictus Clean cleaner cleaning a reception desk" width="1116" height="860" loading="lazy">
-              </figure>
+      <!-- photo carousel (real team photos) → Elementor: Image Carousel, Fade, autoplay 4500ms, pause on hover No, arrows + dots -->
+      <div class="ic-about-hero__media">
+        <div class="ic-slider" data-slider aria-roledescription="carousel" aria-label="The Invictus Clean team at work">
+          <div class="ic-slider__viewport">
+            <figure class="ic-slider__slide is-active" aria-roledescription="slide" aria-label="1 of 6">
+              <img src="images/about-carousel-01-team.webp" alt="The Invictus Clean team in Adelaide" width="1116" height="860" fetchpriority="high">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="2 of 6">
+              <img src="images/about-carousel-02-cleaner-smiling.webp" alt="Smiling Invictus Clean cleaner wiping a kitchen benchtop" width="1116" height="860" loading="lazy">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="3 of 6">
+              <img src="images/about-carousel-03-victor-van.webp" alt="Victor, Invictus Clean team leader, beside the branded cleaning van" width="1116" height="860" loading="lazy">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="4 of 6">
+              <img src="images/about-carousel-04-handrail.webp" alt="Invictus Clean cleaner wiping a handrail with a microfibre cloth" width="1116" height="860" loading="lazy">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="5 of 6">
+              <img src="images/about-carousel-05-office-vacuuming.webp" alt="Invictus Clean cleaner vacuuming an office with a backpack vacuum" width="1116" height="860" loading="lazy">
+            </figure>
+            <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="6 of 6">
+              <img src="images/about-carousel-06-reception.webp" alt="Invictus Clean cleaner cleaning a reception desk" width="1116" height="860" loading="lazy">
+            </figure>
 
-              <button class="ic-slider__arrow ic-slider__arrow--prev" type="button" data-slider-prev aria-label="Previous photo">
-                <svg viewBox="0 0 10 18" aria-hidden="true"><path d="M9 1 1 9l8 8"/></svg>
-              </button>
-              <button class="ic-slider__arrow ic-slider__arrow--next" type="button" data-slider-next aria-label="Next photo">
-                <svg viewBox="0 0 10 18" aria-hidden="true"><path d="m1 1 8 8-8 8"/></svg>
-              </button>
-            </div>
-            <div class="ic-slider__dots" data-slider-dots></div>
+            <button class="ic-slider__arrow ic-slider__arrow--prev" type="button" data-slider-prev aria-label="Previous photo">
+              <svg viewBox="0 0 10 18" aria-hidden="true"><path d="M9 1 1 9l8 8"/></svg>
+            </button>
+            <button class="ic-slider__arrow ic-slider__arrow--next" type="button" data-slider-next aria-label="Next photo">
+              <svg viewBox="0 0 10 18" aria-hidden="true"><path d="m1 1 8 8-8 8"/></svg>
+            </button>
           </div>
+          <div class="ic-slider__dots" data-slider-dots></div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="ic-about-hero__cards">
+  <!-- =========================================================
+       2. VISION / MISSION / VALUES  → Elementor: Heading + Text + Container (2 dark panels) + dark panel with 4 columns
+       ========================================================= -->
+  <section class="ic-section ic-vmv" aria-labelledby="ic-vmv-title">
+    <div class="ic-container">
+      <h2 class="ic-h2 ic-center" id="ic-vmv-title">Our Vision, Mission and Values</h2>
+      <p class="ic-vmv__intro">Our vision, mission and values are the source of inspiration for continuously improving our future and growth.</p>
+        <div class="ic-vmv__cards">
           <div class="ic-panel ic-panel--vm">
             <h2 class="ic-panel__title">Our Vision:</h2>
             <p>To become South Australia’s most trusted cleaning services provider.</p>
@@ -181,8 +193,6 @@
             <p>To help our clients maintain and improve the quality of their working/living environment by providing high standard and cost-efficient cleaning solutions.</p>
           </div>
         </div>
-      </div>
-
       <div class="ic-panel ic-values-panel">
         <h2 class="ic-panel__title">Our Values:</h2>
         <ul class="ic-values-panel__grid">
@@ -203,20 +213,6 @@
             <p>We don’t promise the cheapest rates. However, we strive to find the most cost-efficient, tailored cleaning solution for businesses and homes.</p>
           </li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       2. STORY  → Elementor: Heading + Text Editor (justified)
-       ========================================================= -->
-  <section class="ic-about-story">
-    <div class="ic-container">
-      <h2 class="ic-h2 ic-center">A New option in the local cleaning industry</h2>
-      <div class="ic-text-justify">
-        <p>Invictus Clean (formerly Bravo Clean) is a family-run company, operating in Adelaide since 2021.</p>
-        <p>Born from our experience in South Australia cleaning industry, we have slowly built an excellent reputation for our energy, attention to detail and reliability. Steadily, new businesses, home owners and real estate agencies have been requesting our services, forcing us to expand and build a team.</p>
-        <p>By the end of 2023 Invictus Clean Pty Ltd has been registered as a private company with this simple mission to help our clients maintain and improve the quality of their working/living environment by providing high standard and cost-efficient cleaning solutions.</p>
       </div>
     </div>
   </section>
