@@ -169,8 +169,8 @@ Never set fixed pixel widths on columns.
    - Text (max 32rem, 16px below the title) + "Get a Quote" button (24px below), both left-aligned.
    - Right: **photo carousel of clean spaces** (client feedback: results on the Home, people on About) — *Image Carousel*:
      1 slide · *Fade* · autoplay 4500ms · pause on hover **No** · **dots only** · image ratio 4:3 · radius 8px.
-     Photos, alternating commercial / residential: `home-hero-01-reception-desk` · `02-open-plan-office` · `03-bedroom` ·
-     `04-office-lounge` · `05-carpeted-bedroom`. Full-size originals of the client's new photos:
+     6 photos, alternating commercial / residential: `home-hero-01-reception-desk` · `02-carpet-cleaning` ·
+     `03-open-plan-office` · `04-bedroom` · `05-office-lounge` · `06-carpeted-bedroom`. Full-size originals of the client's new photos:
      `Documentos/Images/wordpress-renomeadas/01-home/home-hero-0X-*-original.jpg`.
    - Mobile: 1 column, carousel below the button.
 2. **Professional cleaners in Adelaide** — two halves, center aligned: photo `home-professional.webp` (16:10, cover) | text right-aligned
