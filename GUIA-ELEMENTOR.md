@@ -167,10 +167,11 @@ Never set fixed pixel widths on columns.
    - H1 with **typing animation**: *Animated Headline* (Pro) → *Typing* · Before text `Commercial & Residential Cleaning` ·
      Animated text: Solutions / You Can Trust / Across Adelaide / Done Right (one per line) · loop · ~2200ms · color Accent · HTML tag H1.
    - Text (max 32rem, 16px below the title) + "Get a Quote" button (24px below), both left-aligned.
-   - Right: **photo carousel** (client feedback: real photos instead of the illustration) — *Image Carousel*: 1 slide ·
-     *Fade* · autoplay 4500ms · pause on hover **No** · **dots only** (no arrows) · image ratio 4:3 · radius 8px.
-     Photos (different from the About ones): `home-hero-01-clinic-bench` · `02-upholstery` · `03-dental-clinic` ·
-     `04-residential-kitchen` · `05-outdoor-area`. The old illustration `home-hero.webp` is no longer used.
+   - Right: **photo carousel of clean spaces** (client feedback: results on the Home, people on About) — *Image Carousel*:
+     1 slide · *Fade* · autoplay 4500ms · pause on hover **No** · **dots only** · image ratio 4:3 · radius 8px.
+     Photos, alternating commercial / residential: `home-hero-01-reception-desk` · `02-open-plan-office` · `03-bedroom` ·
+     `04-office-lounge` · `05-carpeted-bedroom`. Full-size originals of the client's new photos:
+     `Documentos/Images/wordpress-renomeadas/01-home/home-hero-0X-*-original.jpg`.
    - Mobile: 1 column, carousel below the button.
 2. **Professional cleaners in Adelaide** — two halves, center aligned: photo `home-professional.webp` (16:10, cover) | text right-aligned
    (H2 → 24px → 2 paragraphs → 24px → "Read More"). Mobile: text first (left-aligned), photo below.
