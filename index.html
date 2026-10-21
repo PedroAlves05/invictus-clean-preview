@@ -172,7 +172,7 @@
       </div>
       <!-- v3: photos of clean spaces (results) instead of the illustration; people photos live on About.
            Alternating commercial / residential to match the title. Same photo slider as About:
-           Elementor → Image Carousel, 1 slide, Fade, autoplay 4500ms, pause on hover No, dots only. -->
+           Elementor → Image Carousel, 1 slide, Fade, autoplay 4500ms, pause on hover No, arrows + dots (same as About). -->
       <div class="ic-hero__media">
         <div class="ic-slider ic-slider--hero" data-slider aria-roledescription="carousel" aria-label="Spaces we clean across Adelaide">
           <div class="ic-slider__viewport">
@@ -194,6 +194,13 @@
             <figure class="ic-slider__slide" aria-roledescription="slide" aria-label="6 of 6">
               <img src="images/home-hero-06-carpet-cleaning.webp" alt="Freshly cleaned carpet in a building hallway" width="1200" height="900" loading="lazy">
             </figure>
+
+            <button class="ic-slider__arrow ic-slider__arrow--prev" type="button" data-slider-prev aria-label="Previous photo">
+              <svg viewBox="0 0 10 18" aria-hidden="true"><path d="M9 1 1 9l8 8"/></svg>
+            </button>
+            <button class="ic-slider__arrow ic-slider__arrow--next" type="button" data-slider-next aria-label="Next photo">
+              <svg viewBox="0 0 10 18" aria-hidden="true"><path d="m1 1 8 8-8 8"/></svg>
+            </button>
           </div>
           <div class="ic-slider__dots" data-slider-dots></div>
         </div>

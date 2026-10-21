@@ -107,7 +107,12 @@ Breakpoints: Elementor defaults (tablet 1024, mobile 767).
 - **Form fields:** border 1px Field border, radius 0, transparent, height 40px, padding 8px 12px, focus = Primary border.
   Labels Body; "(required)" Small at 70% opacity. Two-column row (First/Last name) = 50/50, gap 12px.
 
-### 2.6 Grid patterns used everywhere
+### 2.6 Photo carousel (Home hero + About) — one style for both
+- Ratio 4:3, radius 8px, *Fade*, autoplay 4500ms, **no pause on hover**.
+- Arrows: 40px white circles at 85% opacity, dark chevron, 12px from the edges, visible on hover (always visible on touch screens).
+- Dots: 9px circles, 1px Primary border, active = filled Primary, 12px apart, 12px below the photo.
+
+### 2.7 Grid patterns used everywhere
 
 | Pattern | Columns (desktop → tablet → mobile) | Where |
 |---|---|---|
@@ -168,7 +173,8 @@ Never set fixed pixel widths on columns.
      Animated text: Solutions / You Can Trust / Across Adelaide / Done Right (one per line) · loop · ~2200ms · color Accent · HTML tag H1.
    - Text (max 32rem, 16px below the title) + "Get a Quote" button (24px below), both left-aligned.
    - Right: **photo carousel of clean spaces** (client feedback: results on the Home, people on About) — *Image Carousel*:
-     1 slide · *Fade* · autoplay 4500ms · pause on hover **No** · **dots only** · image ratio 4:3 · radius 8px.
+     1 slide · *Fade* · autoplay 4500ms · pause on hover **No** · arrows + dots · image ratio 4:3 · radius 8px.
+     **Same settings and styling as the About carousel** (save one as a template / copy its style).
      6 photos, alternating commercial / residential: `home-hero-01-reception-desk` · `02-carpeted-bedroom` ·
      `03-open-plan-office` · `04-bedroom` · `05-office-lounge` · `06-carpet-cleaning`. Full-size originals of the client's new photos:
      `Documentos/Images/wordpress-renomeadas/01-home/home-hero-0X-*-original.jpg`.
